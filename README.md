@@ -13,7 +13,7 @@ paddlepaddle
 parl1.3.1
 
 
-##实现细节
+## 实现细节
 LunarLander-v2的目标就是使月球着陆器能稳稳当当地停在指定区域内。
 LunarLander-v2的state有8维，是连续的。Action有4维，是离散的。因此，本工程采用DQN算法，使用的框架为paddlepaddle和PARL。
 
@@ -25,7 +25,7 @@ LunarLander-v2的state有8维，是连续的。Action有4维，是离散的。�
 
 `evaluate.py`:测试模型，运行100个episode，实时绘制得分散点图，并统计通关百分比(gym官网：得分大于200即认为通关)
 
-###训练策略
+### 训练策略
 `Stage1`以较大的学习率和较大的经验采样batchsize进行训练，直到train_reward有明显下降趋势时停止训练，中途保存测试效果好的多个模型
 
 `Stage2`对于Stage1中保存的模型，减小学习率，减小模型的随机探索概率e_greed，并增大经验回放池容量，继续训练，进行更谨慎的寻优
@@ -35,7 +35,7 @@ LunarLander-v2的state有8维，是连续的。Action有4维，是离散的。�
 通过可视化窗口可以看到，这些通关率高的模型，往往更加谨慎，为了保证通关，会进行更多的操作使着陆器平稳着陆。但着陆器进行一次动作，可能会获得小量负分.
 从安全角度考虑，应该选择通关率高的模型。
 
-##其他文件
+## 其他文件
 `/modeldir`:保存模型参数和模型得分散点图
 
 `/modeldir/modelPerformance.ods`:各模型得分值和通关率统计

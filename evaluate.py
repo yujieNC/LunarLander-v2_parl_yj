@@ -53,7 +53,7 @@ if __name__ == '__main__':
 
     # 加载模型
     model_dir = './modeldir'
-    model_name = '/LunarLander_dqn_2600.ckpt'
+    model_name = '/LunarLander_dqn_2300.ckpt'
 
     agent.restore(model_dir + model_name)
 
