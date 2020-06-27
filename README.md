@@ -11,6 +11,7 @@ gym
 matplotlib
 paddlepaddle
 parl1.3.1
+box2d-py
 
 
 ## 实现细节
